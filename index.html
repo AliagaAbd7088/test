@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GodratVPNAli</title>
+  <style>
+body {
+  background: linear-gradient(100deg, #de5e5e, #5938fd, #de5e5e);
+  background-size: 300% 300%;
+  animation: diagonalGradient 6s linear infinite;
+  color: #fff;
+  font-family: 'Vazir', sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+@keyframes diagonalGradient {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffe7, 0 0 30px #00ffe7, 0 0 40px #00ffe7;
+      }
+    }
+    .btn {
+      background-color: #ffffff33;
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #ffffff66;
+    }
+    .footer {
+      margin-top: 50px;
+      font-size: 1rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>طراح: Ali.aga 💻</h1>
+
+  <p style="font-size: 1.5rem;">برای پشتیبانی بیشتر در اسکواد من در تلگرام عضو شوید 👇</p>
+  <button class="btn" onclick="window.open('https://t.me/+cg7CbqS2NrUyYzNk', '_blank')">عضویت در اسکوآد</button>
+
+  <br/><br/>
+  <button class="btn" onclick="copyConfig()">کپی کانفیگ</button>
+  <p style="font-size: 1.1rem;">راهنما: بعد از کپی کردن، دکمه + را در نرم افزار V2rayNG بزنید، سپس گزینه وارد کردن کانفیگ از کلیپ بورد را بزنید، در نهایت روی سه نقطه بالا زده و بروزرسانی اشتراک را بزنید و کانفیگ برایتان ظاهر خواهد شد، وصل شوید و لذت ببرید!</p>
+  <p style="font-size: 1.5rem;">برای حمایت از من، خوشحال میشم توی اسکواد من عضو بشید و دوستانتون رو هم دعوت کنید</p>
+  <div class="footer">
+    تمامی حقوق محفوظ است © GodratVPNAli
+  </div>
+
+  <script>
+    function copyConfig() {
+      const config = "https://raw.githubusercontent.com/AliagaAbd7088/test/refs/heads/main/config.json"; // جایگزین کن با کانفیگ خودت
+      navigator.clipboard.writeText(config).then(() => {
+        alert("کانفیگ با موفقیت کپی شد 🎉");
+      }, () => {
+        alert("خطا در کپی 😢");
+      });
+    }
+  </script>
+</body>
+</html>
