@@ -1,0 +1,1636 @@
+{
+  "remarks": "Ali.aga(GodratVPN)",
+  "log": {
+    "loglevel": "warning"
+  },
+  "dns": {
+    "hosts": {
+      "geosite:category-ads-all": [
+        "127.0.0.1"
+      ],
+      "geosite:category-ads-ir": [
+        "127.0.0.1"
+      ],
+      "geosite:category-porn": [
+        "127.0.0.1"
+      ]
+    },
+    "servers": [
+      "https://8.8.8.8/dns-query",
+      {
+        "address": "178.22.122.100",
+        "domains": [
+          "geosite:openai"
+        ],
+        "skipFallback": true
+      },
+      {
+        "address": "8.8.8.8",
+        "domains": [
+          "full:rapid-wood-f3b0.kosar-hha.workers.dev",
+          "full:www.speedtest.net"
+        ],
+        "skipFallback": true
+      },
+      {
+        "address": "8.8.8.8",
+        "domains": [
+          "geosite:category-ir",
+          "geosite:cn"
+        ],
+        "expectIPs": [
+          "geoip:ir",
+          "geoip:cn"
+        ],
+        "skipFallback": true
+      }
+    ],
+    "queryStrategy": "UseIPv4",
+    "tag": "dns"
+  },
+  "inbounds": [
+    {
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": true
+      },
+      "tag": "socks-in"
+    },
+    {
+      "port": 10853,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "1.1.1.1",
+        "network": "tcp,udp",
+        "port": 53
+      },
+      "tag": "dns-in"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "rapid-wood-f3b0.kosar-hha.workers.dev",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/Vlio6dAOhupkYTmd/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rAPid-WOod-F3b0.kosar-hHA.WORkeRS.DEv"
+        }
+      },
+      "tag": "prox-1"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/ltQEdN7DbKTzjj1g/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "raPid-wood-F3B0.KoSAr-hHA.wORkErs.deV"
+        }
+      },
+      "tag": "prox-2"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.52.127",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/oR5kcLfi5J7cdH2M/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RaPiD-woOd-F3b0.kOSaR-hha.WoRKeRs.dEv"
+        }
+      },
+      "tag": "prox-3"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.67.199.59",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/nHLhUsMp9J2qk5Or/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rApId-Wood-F3b0.koSar-HHa.WorkerS.Dev"
+        }
+      },
+      "tag": "prox-4"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "103.21.244.24",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/tq53SxCBGD3Mom8R/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rAPid-wood-F3b0.kOSAR-hHA.wORKERS.DEv"
+        }
+      },
+      "tag": "prox-5"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.87.181",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/i3KWSN6Ps6z4pG60/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rAPid-woOd-f3B0.kOSAr-HHA.WoRKeRs.DeV"
+        }
+      },
+      "tag": "prox-6"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.117.152",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/uMYVyTjHa9co4aT5/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rapiD-WooD-f3B0.KosaR-Hha.WORKErs.deV"
+        }
+      },
+      "tag": "prox-7"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.27.101.39",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/6M48uR4ILGvItZFa/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "raPid-wOoD-F3b0.KosaR-HHA.WORKers.DeV"
+        }
+      },
+      "tag": "prox-8"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.24.69.127",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/aWOKZPKSyLEnYYr9/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rAPid-wooD-F3b0.kOSAR-Hha.WORkERs.dEV"
+        }
+      },
+      "tag": "prox-9"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.27.196.8",
+            "port": 443,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/1yip5XSrT5sIjMLB/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "raPID-WOOD-f3b0.KoSar-HHa.wORkErS.dEV"
+        }
+      },
+      "tag": "prox-10"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "rapid-wood-f3b0.kosar-hha.workers.dev",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/bKjklSm0g2uKTwIM/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rApID-WOoD-F3b0.KoSar-hha.WoRkERs.dEv"
+        }
+      },
+      "tag": "prox-11"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/M1nkXMgWOcyg5nt3/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RaPId-wood-f3B0.koSAr-Hha.woRKErs.dEv"
+        }
+      },
+      "tag": "prox-12"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.21.52.127",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/mBgw2EPsqT3by6Ra/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rAPiD-woOD-F3b0.KOsaR-HHA.WorkErS.DeV"
+        }
+      },
+      "tag": "prox-13"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "172.67.199.59",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/c0vtpPyyiSRa6PMu/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rAPiD-wOOd-f3B0.kOsar-HHA.woRKErS.DEv"
+        }
+      },
+      "tag": "prox-14"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "103.21.244.24",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/QaQP5B9FXfVavoa2/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rapId-woOD-F3B0.KOSAR-HHA.WOrkERS.deV"
+        }
+      },
+      "tag": "prox-15"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.87.181",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/gLrIikDJ4py1wy8l/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rAPiD-Wood-F3b0.kOsAR-hha.WoRkErs.DeV"
+        }
+      },
+      "tag": "prox-16"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.16.117.152",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/GOK3oejg8iryTKVJ/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "raPid-wood-f3b0.kosar-HhA.WORkERs.dev"
+        }
+      },
+      "tag": "prox-17"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.27.101.39",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/6LOnmmvDKcVCPTz7/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RApID-Wood-F3b0.kOsAR-Hha.WoRkErs.Dev"
+        }
+      },
+      "tag": "prox-18"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.24.69.127",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/jo6GIzPWLOADZFSm/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RApiD-wOOD-f3B0.KosaR-hHA.wOrKeRs.DEV"
+        }
+      },
+      "tag": "prox-19"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "104.27.196.8",
+            "port": 2053,
+            "users": [
+              {
+                "id": "73875a72-3c74-4316-ad88-3d8567a94251",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/XQFsek37QIby3MGz/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "raPiD-WOOD-F3b0.KOsAR-Hha.wORkErs.dEv"
+        }
+      },
+      "tag": "prox-20"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "rapid-wood-f3b0.kosar-hha.workers.dev",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/tr7OHB3m1Hsooy2qz7/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "Rapid-WOOD-f3b0.kOSAr-HhA.WORKerS.dEv"
+        }
+      },
+      "tag": "prox-21"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trvm3eMogWqRyvCTYC/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RApiD-wood-F3B0.kosar-hhA.WORkeRS.DEv"
+        }
+      },
+      "tag": "prox-22"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.52.127",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trzXlYA41RfCDiwjX4/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RAPID-wOOD-f3B0.kOsAR-HHa.worKers.DEV"
+        }
+      },
+      "tag": "prox-23"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "172.67.199.59",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trSzMLBpdb2TWcvrse/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rApid-WOOd-F3B0.KOsar-HHa.wORkers.dEv"
+        }
+      },
+      "tag": "prox-24"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "103.21.244.24",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trqGI8jgRpQ0nQDBEd/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rAPiD-wood-F3B0.KosAr-HHA.WoRkeRs.dEv"
+        }
+      },
+      "tag": "prox-25"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.16.87.181",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trZ5OzGTT2DLCUQoJl/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RApid-wood-F3B0.kOSAR-HhA.wORKERs.DEV"
+        }
+      },
+      "tag": "prox-26"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.16.117.152",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trtMdQt48dNxgA4ETE/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rapiD-wOOd-F3b0.KoSAr-HhA.WORKErs.dEv"
+        }
+      },
+      "tag": "prox-27"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.27.101.39",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trEMBiX7d4xFHaErOw/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rapId-WOOD-f3B0.KoSar-hHa.WorkERs.dEv"
+        }
+      },
+      "tag": "prox-28"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.24.69.127",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trW7dnjENQPIFpc3g3/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "raPId-WooD-F3b0.kOsAr-Hha.wOrKeRs.DEv"
+        }
+      },
+      "tag": "prox-29"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.27.196.8",
+            "port": 443,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/tr3CuJP55FKof5TCwo/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rapiD-WOoD-F3B0.kOsAr-hha.WorkERS.DEV"
+        }
+      },
+      "tag": "prox-30"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "rapid-wood-f3b0.kosar-hha.workers.dev",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/tr2Av2br7LHSyrWoHF/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rApId-WOoD-F3B0.KOsAr-hHa.WORKeRs.DEV"
+        }
+      },
+      "tag": "prox-31"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "www.speedtest.net",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trmOUcerN2fcPKilCJ/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RaPID-woOd-F3B0.kOsaR-Hha.WORkERs.DEv"
+        }
+      },
+      "tag": "prox-32"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.21.52.127",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/triv0lUPqqYHT3aNUo/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rapiD-wood-F3b0.KOsaR-HhA.WoRkERS.deV"
+        }
+      },
+      "tag": "prox-33"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "172.67.199.59",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trxlnX7t2mLpWyaryV/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rAPID-WoOD-F3B0.koSaR-Hha.wORKERs.DEV"
+        }
+      },
+      "tag": "prox-34"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "103.21.244.24",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trmkbNB99Mqi7io0Qd/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RapID-WoOD-f3B0.KoSaR-hha.WORkers.Dev"
+        }
+      },
+      "tag": "prox-35"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.16.87.181",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/tr3jMBByca3MnWjl3m/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RapiD-wOOd-f3B0.KOSAR-hhA.wORKErs.dEv"
+        }
+      },
+      "tag": "prox-36"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.16.117.152",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trN7NJa2nygvo4KNK2/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "rapId-wOoD-F3b0.KOSAr-hHA.WOrkERS.DEv"
+        }
+      },
+      "tag": "prox-37"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.27.101.39",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trxb6qAfTMlrE8crIn/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "raPId-wOoD-F3B0.KosAr-HHa.wORKErS.DeV"
+        }
+      },
+      "tag": "prox-38"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.24.69.127",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trgFEQbcd29X5ZIQAy/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "raPId-WoOD-F3B0.KOSAr-HHa.WOrkerS.DEv"
+        }
+      },
+      "tag": "prox-39"
+    },
+    {
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "104.27.196.8",
+            "port": 2053,
+            "password": "MaIN_wo-rK_e-R.Main",
+            "level": 8
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        },
+        "wsSettings": {
+          "host": "rapid-wood-f3b0.kosar-hha.workers.dev",
+          "path": "/trb2MKwUd1FIy5LTov/MzUuMTc4LjIzNS4yMjUsMTI4LjE0MC40OC43Mw==?ed=2560"
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "randomized",
+          "alpn": [
+            "http/1.1"
+          ],
+          "serverName": "RAPiD-wooD-f3b0.kosAr-hHa.WORKErS.deV"
+        }
+      },
+      "tag": "prox-40"
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "socks-in"
+        ],
+        "port": "53",
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "dns"
+        ],
+        "ip": [
+          "8.8.8.8"
+        ],
+        "port": "53",
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "178.22.122.100"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "balancerTag": "all",
+        "inboundTag": [
+          "dns"
+        ],
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:category-ads-all",
+          "geosite:category-ads-ir",
+          "geosite:category-porn"
+        ],
+        "outboundTag": "block",
+        "type": "field"
+      },
+      {
+        "domain": [
+          "geosite:private",
+          "geosite:category-ir",
+          "geosite:cn",
+          "geosite:openai"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "geoip:private",
+          "geoip:ir",
+          "geoip:cn"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+      {
+        "network": "tcp",
+        "balancerTag": "all",
+        "type": "field"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "all",
+        "selector": [
+          "prox"
+        ],
+        "strategy": {
+          "type": "leastPing"
+        },
+        "fallbackTag": "prox-2"
+      }
+    ]
+  },
+  "stats": {},
+  "observatory": {
+    "subjectSelector": [
+      "prox"
+    ],
+    "probeUrl": "https://www.gstatic.com/generate_204",
+    "probeInterval": "40s",
+    "enableConcurrency": true
+  }
+}
